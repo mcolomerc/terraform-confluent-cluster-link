@@ -23,7 +23,7 @@ module "network_share" {
   source   = "github.com/mcolomerc/terraform-confluent-network-share?ref=v1.0.0" 
   environment = var.confluent.environment.id
   providers = {
-    confluent = confluent.confluent_cloud 
+    confluent.confluent = confluent.confluent_cloud 
   }
   confluent_cloud_network_ids = local.networks 
 }
