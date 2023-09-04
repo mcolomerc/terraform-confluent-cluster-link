@@ -1,32 +1,32 @@
-# Cluster Linking management 
+# Cluster Linking management
 
-Bidirectional cluster linking 
+Bidirectional cluster linking
 
 ```hcl
 links = [
   {
     name = "bid-link"  
     cluster_1 = {
-      id = "lkc-xxxxx"
-      credentials = {
-        key    = "value"
-        secret = "value"
-      }
-      mirrors = ["topic-3-2"]
+      id = "lkc-mkqvww"
+      bootstrap_endpoint = "lkc-mkqvww.dom4g2l2ypr.eu-central-1.aws.confluent.cloud:9092"
+      rest_endpoint = "https://lkc-mkqvww.dom4g2l2ypr.eu-central-1.aws.confluent.cloud:443"
+      service_account = "mcolomer-admin" 
+      mirrors = ["topic-2-1"]
     },
     cluster_2= {
-      id = "lkc-xxxxx"
-      credentials = {
-        key    = "value"
-        secret = "value"
-      }
-      mirrors = ["topic-6"]
+      id = "lkc-5m2732"
+      bootstrap_endpoint = "lkc-5m2732.dommp7518ew.eu-west-1.aws.confluent.cloud:9092"
+      rest_endpoint = "https://lkc-5m2732.dommp7518ew.eu-west-1.aws.confluent.cloud:443"
+      service_account = "mcolomer-admin" 
+      mirrors = ["topic-1-1"]
     } 
   }
 ]
 ```
 
-## Validation
+## Validation
+
+Confluent CLI commands:
 
 ```bash 
  confluent kafka cluster list
