@@ -20,10 +20,10 @@ locals {
 // For each cluster in the list get the network id and create a network share
 module "network_share" {
   count = var.share_networks ? 1 : 0
-  source   = "github.com/mcolomerc/terraform-confluent-network-share" 
+  source   = "github.com/mcolomerc/terraform-confluent-network-share?ref=v1.0.0" 
   environment = var.confluent.environment.id
   providers = {
-    confluent.confluent_cloud = confluent.confluent_cloud 
+    confluent = confluent.confluent_cloud 
   }
   confluent_cloud_network_ids = local.networks 
 }
