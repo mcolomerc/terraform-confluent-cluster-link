@@ -10,6 +10,8 @@ variable "link" {
     name     = string
     cluster_1 = object({
       id            = string
+      rest_endpoint = string 
+      bootstrap_endpoint = string
       credentials = object({
         key    = string
         secret = string
@@ -18,6 +20,8 @@ variable "link" {
     })
     cluster_2 = object({
       id            = string
+      rest_endpoint = string 
+      bootstrap_endpoint = string
       credentials = object({
         key    = string
         secret = string

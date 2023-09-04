@@ -2,14 +2,16 @@
 variable "environment" {
   type    = string
   default = "dev"
-}
-
+} 
+ 
 # Confluent Cloud Kafka clusters to link
 variable "links" {
   type = list(object({
     name     = string
     cluster_1 = object({
       id            = string
+      rest_endpoint = string 
+      bootstrap_endpoint = string
       credentials = object({
         key    = string
         secret = string
@@ -18,6 +20,8 @@ variable "links" {
     })
     cluster_2 = object({
       id            = string
+      rest_endpoint = string 
+      bootstrap_endpoint = string
       credentials = object({
         key    = string
         secret = string

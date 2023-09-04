@@ -1,11 +1,12 @@
 environment = "dev" 
-share_networks = true
-
+ 
 links = [
   {
     name = "bid-link"  
     cluster_1 = {
       id = "lkc-xxxxx"
+      rest_endpoint = ":443" 
+      bootstrap_endpoint = ":9092"
       credentials = {
         key    = "value"
         secret = "value"
@@ -14,6 +15,8 @@ links = [
     },
     cluster_2= {
       id = "lkc-xxxxx"
+      rest_endpoint = ":443" 
+      bootstrap_endpoint = ":9092"
       credentials = {
         key    = "value"
         secret = "value"
@@ -22,4 +25,5 @@ links = [
     } 
   }
 ]
+ 
  

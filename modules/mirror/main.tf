@@ -12,8 +12,8 @@ resource "confluent_kafka_mirror_topic" "mirror" {
     id            = var.cluster.id
     rest_endpoint = var.cluster.rest_endpoint
     credentials {
-      key    = var.cluster.account.key
-      secret = var.cluster.account.secret
+      key    = var.cluster.credentials.key
+      secret = var.cluster.credentials.secret
     }
   }
  
