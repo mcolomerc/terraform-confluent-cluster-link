@@ -30,7 +30,7 @@ module "network_share" {
  
 // For each cluster in the map 
 module "clink" {
-    source = "../clink"
+    source = "./modules/clink"
     for_each = local.clinkMap
     environment = var.environment
     link = each.value 
